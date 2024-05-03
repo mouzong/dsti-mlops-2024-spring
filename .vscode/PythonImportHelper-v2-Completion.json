@@ -1,0 +1,243 @@
+[
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "user_functions",
+        "description": "user_functions",
+        "isExtraImport": true,
+        "detail": "user_functions",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "warnings",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "warnings",
+        "description": "warnings",
+        "detail": "warnings",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "mean_squared_error",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "mean_absolute_error",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "r2_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "mean_squared_error",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "mean_absolute_error",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "r2_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "ElasticNet",
+        "importPath": "sklearn.linear_model",
+        "description": "sklearn.linear_model",
+        "isExtraImport": true,
+        "detail": "sklearn.linear_model",
+        "documentation": {}
+    },
+    {
+        "label": "ElasticNet",
+        "importPath": "sklearn.linear_model",
+        "description": "sklearn.linear_model",
+        "isExtraImport": true,
+        "detail": "sklearn.linear_model",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "get_email_from_input",
+        "kind": 2,
+        "importPath": "03.continuous-testing.sample_code",
+        "description": "03.continuous-testing.sample_code",
+        "peekOfCode": "def get_email_from_input():\n    \"\"\" Contains '@' and '.' \"\"\"\n    return input(\"Tell me your email: \")\n# More elaborated version (copy to src/user_functions.py)\ndef get_email_from_input():\n    \"\"\" Contains '@' and '.' \"\"\"\n    email = input(\"Tell me your email: \")\n    if (\"@\" not in email or \".\" not in email):\n        print('Email is not valid.')\n    else:",
+        "detail": "03.continuous-testing.sample_code",
+        "documentation": {}
+    },
+    {
+        "label": "get_email_from_input",
+        "kind": 2,
+        "importPath": "03.continuous-testing.sample_code",
+        "description": "03.continuous-testing.sample_code",
+        "peekOfCode": "def get_email_from_input():\n    \"\"\" Contains '@' and '.' \"\"\"\n    email = input(\"Tell me your email: \")\n    if (\"@\" not in email or \".\" not in email):\n        print('Email is not valid.')\n    else:\n        return email\n# Tests (copy to tests/test_user_functions.py)\nimport pytest\nimport io",
+        "detail": "03.continuous-testing.sample_code",
+        "documentation": {}
+    },
+    {
+        "label": "test_email_with_user_input_no_at_sign",
+        "kind": 2,
+        "importPath": "03.continuous-testing.sample_code",
+        "description": "03.continuous-testing.sample_code",
+        "peekOfCode": "def test_email_with_user_input_no_at_sign(monkeypatch):\n    monkeypatch.setattr('sys.stdin', io.StringIO('petra.adaltas.com'))\n    assert get_email_from_input() is None\ndef test_email_with_user_input_no_dot(monkeypatch):\n    monkeypatch.setattr('sys.stdin', io.StringIO('petra@adaltascom'))\n    assert get_email_from_input() is None\ndef test_email_with_user_input_correct(monkeypatch):\n    monkeypatch.setattr('sys.stdin', io.StringIO('petra@adaltas.com'))\n    assert get_email_from_input() == 'petra@adaltas.com'\n# Do the same for the following functions",
+        "detail": "03.continuous-testing.sample_code",
+        "documentation": {}
+    },
+    {
+        "label": "test_email_with_user_input_no_dot",
+        "kind": 2,
+        "importPath": "03.continuous-testing.sample_code",
+        "description": "03.continuous-testing.sample_code",
+        "peekOfCode": "def test_email_with_user_input_no_dot(monkeypatch):\n    monkeypatch.setattr('sys.stdin', io.StringIO('petra@adaltascom'))\n    assert get_email_from_input() is None\ndef test_email_with_user_input_correct(monkeypatch):\n    monkeypatch.setattr('sys.stdin', io.StringIO('petra@adaltas.com'))\n    assert get_email_from_input() == 'petra@adaltas.com'\n# Do the same for the following functions\n# Functions in src/user_functions.py and tests in tests/test_user_functions.py\ndef get_user_name_from_input():\n    \"\"\" Not empty string. No spaces. \"\"\"",
+        "detail": "03.continuous-testing.sample_code",
+        "documentation": {}
+    },
+    {
+        "label": "test_email_with_user_input_correct",
+        "kind": 2,
+        "importPath": "03.continuous-testing.sample_code",
+        "description": "03.continuous-testing.sample_code",
+        "peekOfCode": "def test_email_with_user_input_correct(monkeypatch):\n    monkeypatch.setattr('sys.stdin', io.StringIO('petra@adaltas.com'))\n    assert get_email_from_input() == 'petra@adaltas.com'\n# Do the same for the following functions\n# Functions in src/user_functions.py and tests in tests/test_user_functions.py\ndef get_user_name_from_input():\n    \"\"\" Not empty string. No spaces. \"\"\"\n    return input(\"Create your user name: \")\ndef get_password_from_input():\n    \"\"\" Password needs to be at least 8 characters long with at least one number, one special character and one letter. \"\"\"",
+        "detail": "03.continuous-testing.sample_code",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_name_from_input",
+        "kind": 2,
+        "importPath": "03.continuous-testing.sample_code",
+        "description": "03.continuous-testing.sample_code",
+        "peekOfCode": "def get_user_name_from_input():\n    \"\"\" Not empty string. No spaces. \"\"\"\n    return input(\"Create your user name: \")\ndef get_password_from_input():\n    \"\"\" Password needs to be at least 8 characters long with at least one number, one special character and one letter. \"\"\"\n    return input(\"Create your password: \")",
+        "detail": "03.continuous-testing.sample_code",
+        "documentation": {}
+    },
+    {
+        "label": "get_password_from_input",
+        "kind": 2,
+        "importPath": "03.continuous-testing.sample_code",
+        "description": "03.continuous-testing.sample_code",
+        "peekOfCode": "def get_password_from_input():\n    \"\"\" Password needs to be at least 8 characters long with at least one number, one special character and one letter. \"\"\"\n    return input(\"Create your password: \")",
+        "detail": "03.continuous-testing.sample_code",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "kind": 2,
+        "importPath": "08.model-and-data-testing.lab-resources.wine_linear_regression_test",
+        "description": "08.model-and-data-testing.lab-resources.wine_linear_regression_test",
+        "peekOfCode": "def train(alpha=0.3, l1_ratio=0.5):\n    logging.basicConfig(level=logging.WARN)\n    logger = logging.getLogger(__name__)\n    def eval_metrics(actual, pred):\n        rmse = np.sqrt(mean_squared_error(actual, pred))\n        mae = mean_absolute_error(actual, pred)\n        r2 = r2_score(actual, pred)\n        return rmse, mae, r2\n    warnings.filterwarnings(\"ignore\")\n    np.random.seed(40)",
+        "detail": "08.model-and-data-testing.lab-resources.wine_linear_regression_test",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "kind": 2,
+        "importPath": "10.deployment.lab-resources.model",
+        "description": "10.deployment.lab-resources.model",
+        "peekOfCode": "def train(alpha=0.3, l1_ratio=0.5):\n    logging.basicConfig(level=logging.WARN)\n    logger = logging.getLogger(__name__)\n    def eval_metrics(actual, pred):\n        rmse = np.sqrt(mean_squared_error(actual, pred))\n        mae = mean_absolute_error(actual, pred)\n        r2 = r2_score(actual, pred)\n        return rmse, mae, r2\n    warnings.filterwarnings(\"ignore\")\n    np.random.seed(40)",
+        "detail": "10.deployment.lab-resources.model",
+        "documentation": {}
+    }
+]
